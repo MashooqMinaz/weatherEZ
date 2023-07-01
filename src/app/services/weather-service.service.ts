@@ -26,7 +26,7 @@ export class WeatherServiceService {
     }))
   }
 
-  getWeatherData(longitude:number, latitude:number):Observable<any>{
+  getWeatherData(latitude:number, longitude:number):Observable<any>{
     return this.http.get(`${this.WEATHER_BASE_URL}/weather?lat=${latitude}&lon=${longitude}&appid=${this.WEATHER_API_KEY}&units=metric`)
   }
 

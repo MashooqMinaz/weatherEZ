@@ -24,11 +24,12 @@ export class AppComponent {
   availableForecast!:number
 
   DateToday = new Date().toDateString();
+  curTime = new Date().toLocaleTimeString().slice(0,5)
   input = new Subject<string>()
 
   constructor( private service:WeatherServiceService , private datePipe: DatePipe ){
     this.input.pipe(
-      debounceTime(800),
+      debounceTime(400),
       distinctUntilChanged()).subscribe(val=>{
       this.searchResult(val)
     })
