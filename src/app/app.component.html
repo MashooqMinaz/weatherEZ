@@ -1,11 +1,13 @@
-<div class="flex items-center flex-col h-screen w-screen px-12 sm:px-14 md:px-28 lg:px-32 relative">
+<div [ngClass]="!weatherData ? 'height' : ''" class="flex items-center flex-col h-fit md:h-screen w-screen px-8 sm:px-14 md:px-28 lg:px-32 relative pb-16 md:pb-0">
 
   <img class="absolute object-cover w-full h-full -z-50" src="../assets/images/cloudBg.jpg" alt="">
 
   <div class="flex justify-between items-end w-full mt-8">
     <div class="flex font-extrabold font-serif items-end"> <p class="text-custom-medium-blue text-2xl">Weather</p><p class="text-custom-dark-blue text-3xl">EZ</p> </div>
     <p class="hidden md:block text-base text-custom-light-blue font-mono">{{DateToday|date:'yyyy'}}-{{DateToday|date:'MM'}}-{{DateToday|date:'dd'}} {{curTime}}</p>
-    <svg id="githubBg" class="h-6 w-6 cursor-pointer" viewBox="0 -3.5 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"/><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/><g id="SVGRepo_iconCarrier"> <g id="githubLogo" fill="rgb(83, 96, 171)"> <path d="M127.505 0C57.095 0 0 57.085 0 127.505c0 56.336 36.534 104.13 87.196 120.99 6.372 1.18 8.712-2.766 8.712-6.134 0-3.04-.119-13.085-.173-23.739-35.473 7.713-42.958-15.044-42.958-15.044-5.8-14.738-14.157-18.656-14.157-18.656-11.568-7.914.872-7.752.872-7.752 12.804.9 19.546 13.14 19.546 13.14 11.372 19.493 29.828 13.857 37.104 10.6 1.144-8.242 4.449-13.866 8.095-17.05-28.32-3.225-58.092-14.158-58.092-63.014 0-13.92 4.981-25.295 13.138-34.224-1.324-3.212-5.688-16.18 1.235-33.743 0 0 10.707-3.427 35.073 13.07 10.17-2.826 21.078-4.242 31.914-4.29 10.836.048 21.752 1.464 31.942 4.29 24.337-16.497 35.029-13.07 35.029-13.07 6.94 17.563 2.574 30.531 1.25 33.743 8.175 8.929 13.122 20.303 13.122 34.224 0 48.972-29.828 59.756-58.22 62.912 4.573 3.957 8.648 11.717 8.648 23.612 0 17.06-.148 30.791-.148 34.991 0 3.393 2.295 7.369 8.759 6.117 50.634-16.879 87.122-64.656 87.122-120.973C255.009 57.085 197.922 0 127.505 0"/> <path d="M47.755 181.634c-.28.633-1.278.823-2.185.389-.925-.416-1.445-1.28-1.145-1.916.275-.652 1.273-.834 2.196-.396.927.415 1.455 1.287 1.134 1.923M54.027 187.23c-.608.564-1.797.302-2.604-.589-.834-.889-.99-2.077-.373-2.65.627-.563 1.78-.3 2.616.59.834.899.996 2.08.36 2.65M58.33 194.39c-.782.543-2.06.034-2.849-1.1-.781-1.133-.781-2.493.017-3.038.792-.545 2.05-.055 2.85 1.07.78 1.153.78 2.513-.019 3.069M65.606 202.683c-.699.77-2.187.564-3.277-.488-1.114-1.028-1.425-2.487-.724-3.258.707-.772 2.204-.555 3.302.488 1.107 1.026 1.445 2.496.7 3.258M75.01 205.483c-.307.998-1.741 1.452-3.185 1.028-1.442-.437-2.386-1.607-2.095-2.616.3-1.005 1.74-1.478 3.195-1.024 1.44.435 2.386 1.596 2.086 2.612M85.714 206.67c.036 1.052-1.189 1.924-2.705 1.943-1.525.033-2.758-.818-2.774-1.852 0-1.062 1.197-1.926 2.721-1.951 1.516-.03 2.758.815 2.758 1.86M96.228 206.267c.182 1.026-.872 2.08-2.377 2.36-1.48.27-2.85-.363-3.039-1.38-.184-1.052.89-2.105 2.367-2.378 1.508-.262 2.857.355 3.049 1.398"/> </g> </g></svg>
+    <a href="https://github.com/MashooqMinaz/">
+      <svg id="githubBg" class="h-6 w-6 cursor-pointer" viewBox="0 -3.5 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"/><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/><g id="SVGRepo_iconCarrier"> <g id="githubLogo" fill="rgb(83, 96, 171)"> <path d="M127.505 0C57.095 0 0 57.085 0 127.505c0 56.336 36.534 104.13 87.196 120.99 6.372 1.18 8.712-2.766 8.712-6.134 0-3.04-.119-13.085-.173-23.739-35.473 7.713-42.958-15.044-42.958-15.044-5.8-14.738-14.157-18.656-14.157-18.656-11.568-7.914.872-7.752.872-7.752 12.804.9 19.546 13.14 19.546 13.14 11.372 19.493 29.828 13.857 37.104 10.6 1.144-8.242 4.449-13.866 8.095-17.05-28.32-3.225-58.092-14.158-58.092-63.014 0-13.92 4.981-25.295 13.138-34.224-1.324-3.212-5.688-16.18 1.235-33.743 0 0 10.707-3.427 35.073 13.07 10.17-2.826 21.078-4.242 31.914-4.29 10.836.048 21.752 1.464 31.942 4.29 24.337-16.497 35.029-13.07 35.029-13.07 6.94 17.563 2.574 30.531 1.25 33.743 8.175 8.929 13.122 20.303 13.122 34.224 0 48.972-29.828 59.756-58.22 62.912 4.573 3.957 8.648 11.717 8.648 23.612 0 17.06-.148 30.791-.148 34.991 0 3.393 2.295 7.369 8.759 6.117 50.634-16.879 87.122-64.656 87.122-120.973C255.009 57.085 197.922 0 127.505 0"/> <path d="M47.755 181.634c-.28.633-1.278.823-2.185.389-.925-.416-1.445-1.28-1.145-1.916.275-.652 1.273-.834 2.196-.396.927.415 1.455 1.287 1.134 1.923M54.027 187.23c-.608.564-1.797.302-2.604-.589-.834-.889-.99-2.077-.373-2.65.627-.563 1.78-.3 2.616.59.834.899.996 2.08.36 2.65M58.33 194.39c-.782.543-2.06.034-2.849-1.1-.781-1.133-.781-2.493.017-3.038.792-.545 2.05-.055 2.85 1.07.78 1.153.78 2.513-.019 3.069M65.606 202.683c-.699.77-2.187.564-3.277-.488-1.114-1.028-1.425-2.487-.724-3.258.707-.772 2.204-.555 3.302.488 1.107 1.026 1.445 2.496.7 3.258M75.01 205.483c-.307.998-1.741 1.452-3.185 1.028-1.442-.437-2.386-1.607-2.095-2.616.3-1.005 1.74-1.478 3.195-1.024 1.44.435 2.386 1.596 2.086 2.612M85.714 206.67c.036 1.052-1.189 1.924-2.705 1.943-1.525.033-2.758-.818-2.774-1.852 0-1.062 1.197-1.926 2.721-1.951 1.516-.03 2.758.815 2.758 1.86M96.228 206.267c.182 1.026-.872 2.08-2.377 2.36-1.48.27-2.85-.363-3.039-1.38-.184-1.052.89-2.105 2.367-2.378 1.508-.262 2.857.355 3.049 1.398"/> </g> </g></svg>
+    </a>
   </div>
 
   <div class="w-full relative">
@@ -19,7 +21,7 @@
     </div>
 
     <!-- suggestion -->
-    <div class="absolute top-[72px] z-50 left-0 rounded-lg overflow-hidden mt-[2px] shadow-lg bg-gradient-to-b from-white/60 to-white/30 text-[#1c0708] backdrop-blur-[.5em] cursor-pointer">
+    <div class="absolute top-[82px] md:top-[78px] z-50 left-0 rounded-lg overflow-hidden mt-[2px] shadow-lg bg-gradient-to-b from-white/60 to-white/30 text-[#1c0708] backdrop-blur-[.5em] cursor-pointer">
       <div class="flex items-center justify-center hover:border-[1px] border-gray-700 py-1 px-4" *ngFor="let item of geoData | async">
         <p (click)="getResult(item.latitude,item.longitude)" *ngIf="geoData" class="text-gray-700">
           {{item.name}}
@@ -28,7 +30,7 @@
     </div>
 
     <!-- loading background  -->
-    <div class="w-full h-fit pt-24 flex items-center justify-center flex-col font-sans" *ngIf="!geoData">
+    <div class="w-full h-full md:h-fit pt-24 flex items-center justify-center flex-col font-sans" *ngIf="!geoData">
       <p class="text-custom-dark-blue font-semibold text-sm md:text-lg">In the city there's always something to discover</p>
       <p class="text-custom-medium-blue font-semibold text-base md:text-2xl pt-2">Search for the city you want to discover</p>
       <img src="../assets/images/tempBg.png" alt="" class="opacity-70 pt-4">
@@ -39,16 +41,18 @@
 
   <!-- --------------------------- MAIN CARD ---------------------- -->
   <div *ngIf="weatherData" class="w-full h-full flex flex-col md:flex-row justify-between gap-5 mt-5">
-    <div class="h-full w-1/2 flex flex-col gap-5">
+    <div class="h-full w-full md:w-1/2 flex flex-col gap-5">
 
-      <div class="h-[22%] w-full pt-8 px-16 flex justify-between  items-center bg-gradient-to-b from-white/10 to-white/5 text-[#1c0708] backdrop-blur-[.5em] rounded-2xl shadow-black/50  overflow-hidden shadow-2xl">
-        <div class="flex flex-col justify-center items-center max-w-[33%]">
-          <p class="text-3xl font-extrabold text-white">{{weatherData.name}},{{weatherData.sys.country}}</p>
+      <div class="h-fit md:h-[22%] w-full py-8 md:py-0 md:pt-8 px-2 md:px-16 flex flex-col md:flex-row md:justify-between  items-center bg-gradient-to-b from-white/10 to-white/5 text-[#1c0708] backdrop-blur-[.5em] rounded-2xl shadow-black/50  overflow-hidden shadow-2xl">
+        <p class="font-bold text-xl md:hidden text-custom-grey mb-2 md:mb-4">CURRENT WEATHER</p>
+
+        <div class="flex flex-col gap-8 md:gap-0 justify-center md:items-start items-center md:max-w-[33%]">
+          <p class="text-3xl font-extrabold text-white">{{weatherData.name}}, {{weatherData.sys.country}}</p>
           <p class="text-lg text-custom-grey">Today {{ DateToday | date:'d MMM' }}</p>
         </div>
 
-        <div class="flex flex-col justify-center items-center -mt-12">
-          <p class="font-bold text-xl text-custom-grey mb-4">CURRENT WEATHER</p>
+        <div class="flex flex-col justify-center items-center md:-mt-12">
+          <p class="font-bold text-xl hidden md:block text-custom-grey mb-4">CURRENT WEATHER</p>
           <p class="text-3xl font-extrabold text-white">{{ weatherData.main.temp | number : '1.0-0'}} °C</p>
           <p class="text-lg text-custom-grey">{{ weatherData.weather[0].description}}</p>
         </div>
@@ -59,62 +63,66 @@
 
 
       <!-- ------------------------ AIR condition ------------------>
-      <div class="h-[22%] w-full pt-4 px-16 bg-gradient-to-b flex flex-col items-center justify-center from-white/10 to-white/5 text-[#1c0708] backdrop-blur-[.5em] rounded-2xl shadow-black/50  overflow-hidden shadow-2xl">
+      <div class="h-fit md:h-[22%] w-full  py-8 md:py-0 md:pt-4 px-2 md:px-16 bg-gradient-to-b flex flex-col items-center from-white/10 to-white/5 text-[#1c0708] backdrop-blur-[.5em] rounded-2xl shadow-black/50  overflow-hidden shadow-2xl">
 
-        <p class="font-bold text-xl text-custom-grey ">AIR CONDITIONS</p>
+        <p class="font-bold text-xl text-custom-grey">AIR CONDITIONS</p>
 
-        <div class="flex justify-between w-full h-5/6">
-
-          <div class="flex flex-col justify-center items-center">
-            <div class="flex gap-1 text-lg text-white/50">
-              <span class="material-symbols-outlined ">
-                device_thermostat
-              </span>
-              <p>Real Feel</p>
+        <div class="flex w-full mt-2 md:mt-0 h-fit md:h-5/6 py-8 md:py-0 gap-0 md:gap-8 lg:gap-12">
+          <div class="w-full md:w-1/2 flex flex-col md:flex-row  justify-between md:justify-end gap-8 lg:gap-12">
+            <div class="flex flex-col justify-center items-center">
+              <div class="flex gap-1 text-lg text-white/50">
+                <span class="material-symbols-outlined ">
+                  device_thermostat
+                </span>
+                <p>Real Feel</p>
+              </div>
+              <p class="text-3xl font-extrabold text-white">{{weatherData.main.feels_like| number : '1.0-0'}} °C</p>
             </div>
-            <p class="text-3xl font-extrabold text-white">{{weatherData.main.feels_like| number : '1.0-0'}} °C</p>
+
+            <div class="flex flex-col justify-center items-center">
+              <div class="flex gap-1 text-lg text-white/50">
+                <span class="material-symbols-outlined ">
+                  air
+                </span>
+                <p>Wind</p>
+              </div>
+              <p class="text-3xl font-extrabold text-white">{{weatherData.wind.speed}} m/s</p>
+            </div>
+
           </div>
 
-          <div class="flex flex-col justify-center items-center">
-            <div class="flex gap-1 text-lg text-white/50">
-              <span class="material-symbols-outlined ">
-                air
-              </span>
-              <p>Wind</p>
+          <div class="w-full md:w-1/2 flex flex-col md:flex-row  justify-between md:justify-start gap-0 md:gap-8 lg:gap-12">
+            <div class="flex flex-col justify-center items-center">
+              <div class="flex gap-1 text-lg text-white/50">
+                <span class="material-symbols-outlined ">
+                  filter_drama
+                </span>
+                <p>Clouds</p>
+              </div>
+              <p class="text-3xl font-extrabold text-white">{{weatherData.clouds.all}} %</p>
             </div>
-            <p class="text-3xl font-extrabold text-white">{{weatherData.wind.speed}} m/s</p>
-          </div>
 
-          <div class="flex flex-col justify-center items-center">
-            <div class="flex gap-1 text-lg text-white/50">
-              <span class="material-symbols-outlined ">
-                filter_drama
-              </span>
-              <p>Clouds</p>
+            <div class="flex flex-col justify-center items-center">
+              <div class="flex gap-1 text-lg text-white/50">
+                <span class="material-symbols-outlined ">
+                  humidity_mid
+                </span>
+                <p>Humidity</p>
+              </div>
+              <p class="text-3xl font-extrabold text-white">{{weatherData.main.humidity}} %</p>
             </div>
-            <p class="text-3xl font-extrabold text-white">{{weatherData.clouds.all}} %</p>
-          </div>
-
-          <div class="flex flex-col justify-center items-center">
-            <div class="flex gap-1 text-lg text-white/50">
-              <span class="material-symbols-outlined ">
-                humidity_mid
-              </span>
-              <p>Humidity</p>
-            </div>
-            <p class="text-3xl font-extrabold text-white">{{weatherData.main.humidity}} %</p>
           </div>
 
         </div>
 
       </div>
 
+      <!-- todays forecast  -->
+      <div class="h-fit md:h-[31%] w-full py-8 md:py-0 px-2 md:px-16 bg-gradient-to-b flex flex-col items-center from-white/10 to-white/5 text-[#1c0708] backdrop-blur-[.5em] rounded-2xl shadow-black/50  overflow-hidden shadow-2xl">
 
-      <div class="h-[31%] w-full px-16 bg-gradient-to-b flex flex-col items-center from-white/10 to-white/5 text-[#1c0708] backdrop-blur-[.5em] rounded-2xl shadow-black/50  overflow-hidden shadow-2xl">
-
-        <p class="font-bold text-xl pt-3 text-custom-grey ">TODAY'S FORECAST</p>
-        <p class="text-sm text-blue-950/70">( {{availableForecast}} available forecasts )</p>
-        <div class="flex justify-center items-center gap-4 w-full h-full">
+        <p class="font-bold text-xl md:pt-3 text-custom-grey ">TODAY'S FORECAST</p>
+        <p class="text-sm text-custom-light-blue mt-2 md:mt-0">( {{availableForecast}} available forecasts )</p>
+        <div class="flex flex-wrap justify-center mt-2 md:mt-0 items-center gap-4 w-full h-full">
 
           <div class="flex flex-col justify-center items-center border-2 border-white/30 px-4 py-2 rounded-xl backdrop-blur-md"
           *ngFor="let item of forecastData">
@@ -131,14 +139,14 @@
 
     <!-- weekly -->
 
-    <div class="h-4/5 w-1/2 py-2 px-12 flex flex-col items-center bg-gradient-to-b from-white/10 to-white/5 text-[#1c0708] backdrop-blur-[.5em] rounded-2xl shadow-black/50  overflow-hidden shadow-2xl">
-      <p class="font-bold text-xl pt-3 text-custom-grey">WEEKLY FORECAST</p>
+    <div class="h-fit md:h-4/5 w-full md:w-1/2 py-8 md:py-2 px-6 md:px-12 flex flex-col items-center bg-gradient-to-b from-white/10 to-white/5 text-[#1c0708] backdrop-blur-[.5em] rounded-2xl shadow-black/50  overflow-hidden shadow-2xl">
+      <p class="font-bold text-xl md:pt-3 text-custom-grey">WEEKLY FORECAST</p>
 
-      <div class="flex flex-col justify-center items-center gap-4 w-full h-full">
+      <div class="flex flex-col justify-center items-center mt-6 gap-6 md:gap-4 w-full h-full">
 
-        <div class="flex justify-between items-center w-full border-2 border-white/30 px-4 py-2 rounded-xl backdrop-blur-md"
+        <div class="flex flex-col md:flex-row justify-center md:justify-between items-center w-full border-2 border-white/30 px-4 py-2 rounded-xl backdrop-blur-md"
         *ngFor="let item of forecastWeek">
-          <div>
+          <div class="flex flex-col md:flex-row items-center">
             <p class="text-white font-bold text-xl">{{item.dt_txt | date:'EEEE'}}</p>
             <div class="flex gap-2 items-center">
               <img class="w-[1.8rem] sm:w-[2.5rem]" src="../assets/images/weatherLogos/{{item.weather[0].icon}}.png" alt="">
@@ -185,17 +193,3 @@
   </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- bg-gradient-to-b from-white/60 to-white/30 text-[#1c0708] backdrop-blur-[.5em] border-[1px] border-solid border-white border-opacity-10 rounded-2xl shadow-black/50  overflow-hidden shadow-2xl hover:-translate-y-1 hover:shadow-black/75 hover:backdrop-blur-[1em] transition -->
